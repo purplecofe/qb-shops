@@ -151,33 +151,33 @@ local function createPeds()
         end
     end
 
-    if not ShopPed["casino"] then ShopPed["casino"] = {} end
-    local current = Config.SellCasinoChips.ped
-    current = type(current) == 'string' and GetHashKey(current) or current
-    RequestModel(current)
+    -- if not ShopPed["casino"] then ShopPed["casino"] = {} end
+    -- local current = Config.SellCasinoChips.ped
+    -- current = type(current) == 'string' and GetHashKey(current) or current
+    -- RequestModel(current)
 
-    while not HasModelLoaded(current) do
-        Wait(0)
-    end
-    ShopPed["casino"] = CreatePed(0, current, Config.SellCasinoChips.coords.x, Config.SellCasinoChips.coords.y, Config.SellCasinoChips.coords.z-1, Config.SellCasinoChips.coords.w, false, false)
-    FreezeEntityPosition(ShopPed["casino"], true)
-    SetEntityInvincible(ShopPed["casino"], true)
-    SetBlockingOfNonTemporaryEvents(ShopPed["casino"], true)
+    -- while not HasModelLoaded(current) do
+    --     Wait(0)
+    -- end
+    -- ShopPed["casino"] = CreatePed(0, current, Config.SellCasinoChips.coords.x, Config.SellCasinoChips.coords.y, Config.SellCasinoChips.coords.z-1, Config.SellCasinoChips.coords.w, false, false)
+    -- FreezeEntityPosition(ShopPed["casino"], true)
+    -- SetEntityInvincible(ShopPed["casino"], true)
+    -- SetBlockingOfNonTemporaryEvents(ShopPed["casino"], true)
 
-    if Config.UseTarget then
-        exports['qb-target']:AddTargetEntity(ShopPed["casino"], {
-            options = {
-                {
-                    label = 'Sell Chips',
-                    icon = 'fa-solid fa-coins',
-                    action = function()
-                        TriggerServerEvent("qb-shops:server:sellChips")
-                    end
-                }
-            },
-            distance = 2.0
-        })
-    end
+    -- if Config.UseTarget then
+    --     exports['qb-target']:AddTargetEntity(ShopPed["casino"], {
+    --         options = {
+    --             {
+    --                 label = 'Sell Chips',
+    --                 icon = 'fa-solid fa-coins',
+    --                 action = function()
+    --                     TriggerServerEvent("qb-shops:server:sellChips")
+    --                 end
+    --             }
+    --         },
+    --         distance = 2.0
+    --     })
+    -- end
 
     pedSpawned = true
 end
@@ -216,16 +216,16 @@ CreateThread(function()
             end
         end)
 
-        local sellChips = CircleZone:Create(vector3(Config.SellCasinoChips.coords["x"], Config.SellCasinoChips.coords["y"], Config.SellCasinoChips.coords["z"]), Config.SellCasinoChips.radius, {useZ = true})
-        sellChips:onPlayerInOut(function(isPointInside)
-            if isPointInside then
-                inChips = true
-                exports["qb-core"]:DrawText(Lang:t("info.sell_chips"))
-            else
-                inChips = false
-                exports["qb-core"]:HideText()
-            end
-        end)
+        -- local sellChips = CircleZone:Create(vector3(Config.SellCasinoChips.coords["x"], Config.SellCasinoChips.coords["y"], Config.SellCasinoChips.coords["z"]), Config.SellCasinoChips.radius, {useZ = true})
+        -- sellChips:onPlayerInOut(function(isPointInside)
+        --     if isPointInside then
+        --         inChips = true
+        --         exports["qb-core"]:DrawText(Lang:t("info.sell_chips"))
+        --     else
+        --         inChips = false
+        --         exports["qb-core"]:HideText()
+        --     end
+        -- end)
     end
 end)
 

@@ -895,33 +895,33 @@ Config.Locations = {
     },
 
     -- Casino Locations
-    ["casino"] = {
-        ["label"] = "Diamond Casino",
-        ["coords"] = vector4(949.29, 32.13, 71.95, 79.54),
-        ["ped"] = 'csb_tomcasino',
-        ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
-        ["radius"] = 1.5,
-        ["targetIcon"] = "fas fa-coins",
-        ["targetLabel"] = "Buy Chips",
-        ["products"] = Config.Products["casino"],
-        ["showblip"] = true,
-        ["blipsprite"] = 617,
-        ["blipcolor"] = 0
-    },
+    -- ["casino"] = {
+    --     ["label"] = "Diamond Casino",
+    --     ["coords"] = vector4(949.29, 32.13, 71.95, 79.54),
+    --     ["ped"] = 'csb_tomcasino',
+    --     ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
+    --     ["radius"] = 1.5,
+    --     ["targetIcon"] = "fas fa-coins",
+    --     ["targetLabel"] = "Buy Chips",
+    --     ["products"] = Config.Products["casino"],
+    --     ["showblip"] = false,
+    --     ["blipsprite"] = 617,
+    --     ["blipcolor"] = 0
+    -- },
 
-    ["casinobar"] = {
-        ["label"] = "Casino Bar",
-        ["coords"] = vector4(937.45, 27.22, 71.83, 61.21),
-        ["ped"] = 'a_m_y_smartcaspat_01',
-        ["scenario"] = "WORLD_HUMAN_VALET",
-        ["radius"] = 1.5,
-        ["targetIcon"] = "fas fa-wine-bottle",
-        ["targetLabel"] = "Open Casino Bar",
-        ["products"] = Config.Products["liquor"],
-        ["showblip"] = false,
-        ["blipsprite"] = 52,
-        ["blipcolor"] = 0
-    },
+    -- ["casinobar"] = {
+    --     ["label"] = "Casino Bar",
+    --     ["coords"] = vector4(937.45, 27.22, 71.83, 61.21),
+    --     ["ped"] = 'a_m_y_smartcaspat_01',
+    --     ["scenario"] = "WORLD_HUMAN_VALET",
+    --     ["radius"] = 1.5,
+    --     ["targetIcon"] = "fas fa-wine-bottle",
+    --     ["targetLabel"] = "Open Casino Bar",
+    --     ["products"] = Config.Products["liquor"],
+    --     ["showblip"] = false,
+    --     ["blipsprite"] = 52,
+    --     ["blipcolor"] = 0
+    -- },
 
     -- Weedshop Locations
     ["weedshop"] = {
