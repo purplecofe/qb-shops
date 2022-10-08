@@ -308,13 +308,21 @@ Config.Products = {
             slot = 1,
         },
         [2] = {
-            name = "jerry_can",
-            price = 200,
-            amount = 50,
-            info = {},
+            name = "syphoningkit",
+            price = 5000,
+            amount = 5,
+            info = { gasamount = 0 },
             type = "item",
-            slot = 2,
-        },
+            slot = 10,
+        }, -- CDN-Fuel / CDN-Syphoning
+        [3] = {
+            name = "jerrycan",
+            price = 750,
+            amount = 5,
+            info = { gasamount = 0 },
+            type = "item",
+            slot = 11,
+        }, -- CDN-Fuel
     },
     ["leisureshop"] = {
         [1] = {
