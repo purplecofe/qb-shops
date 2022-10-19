@@ -431,6 +431,41 @@ Config.Products = {
             slot = 1,
         }
     },
+    ["gearshop"] = {
+        [1] = {
+            name = "diving_gear",
+            price = 2500,
+            amount = 10,
+            info = {},
+            type = "item",
+            slot = 1,
+        },
+        [2] = {
+            name = "jerrycan",
+            price = 200,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 2,
+        },
+        [3] = {
+            name = "fishingrod",
+            price = 100,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 3,
+        },
+        [4] = {
+            name = "fishingbait",
+            price = 30,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 4,
+        },
+    },
+    
 }
 
 Config.Locations = {
@@ -975,4 +1010,20 @@ Config.Locations = {
         ["blipsprite"] = 52,
         ["blipcolor"] = 0
     },
+
+    -- Fishing
+    ["fishingtourn"] = {
+        ["label"] = "Leisure Shop",
+        ["coords"] = vector4(-335.62, 6103.46, 31.44, 230.45),
+        ["ped"] = 'ig_oneil',
+        ["scenario"] = "WORLD_HUMAN_LEANING",
+        ["radius"] = 2.5,
+        ["targetIcon"] = "fas fa-leaf",
+        ["targetLabel"] = "Open Leisure Shop",
+        ["products"] = Config.Products["gearshop"],
+        ["showblip"] = false,
+        ["blipsprite"] = 52,
+        ["blipcolor"] = 0
+    },
+    
 }
